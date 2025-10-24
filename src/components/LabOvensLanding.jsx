@@ -82,7 +82,17 @@ export default function LabOvensLanding() {
             </motion.div>
           </div>
         </div>
-        <div aria-hidden="true" style="pointer-events:none;position:absolute;left:0;right:0;top:0;height:1px;"></div>
+        <div
+  aria-hidden="true"
+  style={{
+    pointerEvents: 'none',
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    height: 1,
+  }}
+/>
       </Section>
 
       <Section id="learn" alt>
