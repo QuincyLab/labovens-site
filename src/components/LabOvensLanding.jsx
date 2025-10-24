@@ -5,10 +5,14 @@ import { ArrowRight, Flame, Wind, Ruler, Gauge, ShieldCheck, Mail, BookOpen, Fac
 const UTM = '?utm_source=labovens.com&utm_medium=referral&utm_campaign=landing'
 const LINKS = {
   home: `https://www.quincylab.com/${UTM}`,
-  ovens: `https://www.quincylab.com/${UTM}#ovens`,
+  ovens: `https://quincylab.com/model-comparison-4${UTM}`,
   contact: `https://www.quincylab.com/${UTM}#contact`,
-  resources: `https://www.quincylab.com/${UTM}#resources`,
+  resources: `https://quincylab.com/sales-brochures${UTM}`,
+  forcedAir: `https://quincylab.com/model-comparison-4${UTM}`,
+  gravity: `https://quincylab.com/model-comparison-4${UTM}`,
+  quickGuides: `https://quincylab.com/buyers-guide-1${UTM}`,
 }
+
 
 const features = [
   { icon: Wind, title: 'Forced-Air Convection', text: 'Fast recovery, enhanced uniformity, ideal for high-throughput drying and curing.' },
@@ -76,7 +80,7 @@ export default function LabOvensLanding() {
               </p>
               <div className="hstack gap-3" style={{marginTop:24, flexWrap:'wrap'}}>
                 <Button href={LINKS.home}>Browse Quincy Lab Ovens <ArrowRight size={18}/></Button>
-                <Button href="#compare" outline>Compare Types</Button>
+                <Button href={LINKS.ovens} outline>Compare Types</Button>
               </div>
               <div className="pill" style={{marginTop:16}}><CheckCircle size={16}/> No ads, no fluff — just what you need to decide.</div>
             </motion.div>
@@ -127,7 +131,7 @@ export default function LabOvensLanding() {
               <li>Best for high-throughput drying/curing</li>
               <li>Typical use: materials testing, electronics, QA/QC</li>
             </ul>
-            <div style={{marginTop:8}}><Button href={LINKS.home} size="sm">See Quincy forced-air ovens</Button></div>
+            <div style={{marginTop:8}}><Button href={LINKS.forcedAir} size="sm">See Quincy forced-air ovens</Button></div>
           </Card>
 
           <Card>
@@ -138,7 +142,7 @@ export default function LabOvensLanding() {
               <li>Great for labs prioritizing minimal disturbance</li>
               <li>Typical use: reagents, glassware, education labs</li>
             </ul>
-            <div style={{marginTop:8}}><Button href={LINKS.home} size="sm">See Quincy gravity ovens</Button></div>
+            <div style={{marginTop:8}}><Button href={LINKS.gravity} size="sm">See Quincy gravity ovens</Button></div>
           </Card>
         </div>
 
@@ -157,7 +161,7 @@ export default function LabOvensLanding() {
             <Card key={i}>
               <div className="hstack gap-2" style={{fontWeight:600, marginBottom:8}}><BookOpen size={16}/> {title}</div>
               <div className="muted" style={{fontSize:14}}>Read a short explainer, then jump to Quincy Lab models recommended for that use-case.</div>
-              <div style={{marginTop:8}}><a className="pill" href={LINKS.resources} target="_blank" rel="noreferrer">Open guide <ArrowRight size={16}/></a></div>
+              <div style={{marginTop:8}}><a className="pill" href={LINKS.quickGuides} target="_blank" rel="noreferrer">Open guide <ArrowRight size={16}/></a></div>
             </Card>
           ))}
         </div>
